@@ -1,0 +1,192 @@
+{
+  "name": "Sales",
+  "plural": "sales",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "sale_no": {
+      "type": "string",
+      "id": true,
+      "generated": false,
+      "required": true,
+      "comments": "Sale ID"
+    },
+    "shop_code": {
+      "type": "string",
+      "required": true,
+      "comments": "Shop code"
+    },
+    "shop_name": {
+      "type": "string",
+      "required": true
+    },
+    "order_no": {
+      "type": "string",
+      "required": false,
+      "length": 60,
+      "mysql": {
+        "dataType": "VARCHAR",
+        "default": null
+      },
+      "comments": "order ID"
+    },
+    "member_name": {
+      "type": "string",
+      "comments": ""
+    },
+    "member_uname": {
+      "type": "string",
+      "comments": ""
+    },
+    "logi_name": {
+      "type": "string",
+      "required": true,
+      "comments": ""
+    },
+    "logi_no": {
+      "type": "string",
+      "comments": ""
+    },
+    "pay_method": {
+      "type": "string"
+    },
+    "sale_amount": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "pmt_amount": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "goods_amount": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "freight_amount": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "additional_amount": {
+      "type": "string",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      },
+      "comments": ""
+    },
+    "has_tax": {
+      "type": "boolean"
+    },
+    "order_check_op": {
+      "type": "string"
+    },
+    "sale_time": {
+      "type": "date",
+      "required": true,
+      "mysql": {
+        "dataType": "DATETIME",
+        "default": "CURRENT_TIMESTAMP"
+      }
+    },
+    "order_create_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "pay_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "order_check_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "delivery_no": {
+      "type": "string",
+      "comments": "shipment number"
+    },
+    "ship_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "branch_name": {
+      "type": "string"
+    },
+    "branch_bn": {
+      "type": "string"
+    },
+    "consignee": {
+      "type": "string"
+    },
+    "consignee_area": {
+      "type": "string"
+    },
+    "consignee_addr": {
+      "type": "string"
+    },
+    "consignee_zip": {
+      "type": "string"
+    },
+    "consignee_tel": {
+      "type": "string"
+    },
+    "consignee_email": {
+      "type": "string"
+    },
+    "consignee_mobile": {
+      "type": "string",
+      "comments": ""
+    },
+    "is_test": {
+      "type": "string",
+      "mysql": {
+        "default": null
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sale_items": {
+      "type": "hasMany",
+      "model": "SaleItems",
+      "foreignKey": "salesId",
+      "options": {
+        "validate": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

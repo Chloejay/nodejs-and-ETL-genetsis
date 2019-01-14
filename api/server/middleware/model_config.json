@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Users": {
+    "dataSource": "mysql"
+  },
+  "AccessToken": {
+    "dataSource": "mysql",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Users",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "Sales": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SaleItems": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AfterSales": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AfterSaleItems": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Iostock": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Pkg": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "BundledProduct": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SkuStock": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "BranchStore": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Inventory": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "PurchaseOrder": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "PurchaseOrderItems": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Invoice": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "InvoiceOrder": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "InvoiceOrderDetails": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Goods": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Delivery": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "PurchaseReturn": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Appropriation": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "OrderItem": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "DeliveryItems": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "OmsTagInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "OmsBatchInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "POProductInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "POSupplementInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "FileProcess": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TmallMonthlyInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TmallDailyInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TmallWeeklyInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AlipayPaymentInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AlipaySalesInfo": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "DfsMasterFile": {
+    "dataSource": "mysql",
+    "public": true
+  }, 
+  "AfterSaleType": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "SubwayDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },  
+  "ZuanshiDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "AlimamaDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "BrandingDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "ZoneDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TrafficDailyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TrafficWeeklyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  },
+  "TrafficMonthlyInfo":{
+    "dataSource": "mysql",
+    "public": true
+  }
+}

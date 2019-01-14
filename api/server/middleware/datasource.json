@@ -1,0 +1,15 @@
+{
+  "mysql": {
+    "host": "127.0.0.1", 
+    "port": 3306, 
+    "database": "delta_db",
+    "password": "rootPassword", 
+    "name": "mysql", 
+    "user": "root", 
+    "connector": "mysql", 
+    "supportBigNumbers": true, 
+    "debug": true, 
+    "charset": "utf8mb4",
+    "collation": "utf8mb4" 
+  }  
+} 

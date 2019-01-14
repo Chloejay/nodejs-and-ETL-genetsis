@@ -1,0 +1,115 @@
+{
+  "name": "AfterSales",
+  "plural": "after-sales",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "shop_code": {
+      "type": "string"
+    },
+    "shop_name": {
+      "type": "string"
+    },
+    "order_no": {
+      "type": "number",
+      "required": true,
+      "mysql": {
+        "dataType": "BIGINT",
+        "limit": 20
+      }
+    },
+    "aftersale_no": {
+      "type": "string",
+      "id": true,
+      "generated": false,
+      "required": true
+    },
+    "aftersale_apply_no": {
+      "type": "number",
+      "mysql": {
+        "dataType": "BIGINT",
+        "limit": 20
+      }
+    },
+    "refund_apply_no": {
+      "type": "number",
+      "mysql": {
+        "dataType": "BIGINT",
+        "limit": 20
+      }
+    },
+    "aftersale_type": {
+      "type": "string"
+    },
+    "pay_method": {
+      "type": "string"
+    },
+    "refund_money": {
+      "type": "number",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "member_name": {
+      "type": "string"
+    },
+    "member_mobile": {
+      "type": "string"
+    },
+    "check_op": {
+      "type": "string"
+    },
+    "quality_inspection_op": {
+      "type": "string"
+    },
+    "refund_op": {
+      "type": "string"
+    },
+    "apply_time": {
+      "type": "string"
+    },
+    "check_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "quality_inspection_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "refund_time": {
+      "type": "date",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    },
+    "aftersale_time": {
+      "type": "string",
+      "mysql": {
+        "dataType": "DATETIME"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "aftersale_items": {
+      "type": "hasMany",
+      "model": "AfterSaleItems",
+      "foreignKey": "afterSalesId",
+      "options": {
+        "validate": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
