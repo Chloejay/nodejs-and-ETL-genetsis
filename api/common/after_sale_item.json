@@ -1,0 +1,89 @@
+{
+  "name": "AfterSaleItems",
+  "plural": "after-sale-items",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": false,
+      "required": true,
+      "mysql": {
+        "dataType": "BIGINT",
+        "limit": 20
+      }
+    },
+    "apply_money": {
+      "type": "number",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "refund_money": {
+      "type": "number",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "bn": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "nums": {
+      "type": "number"
+    },
+    "price": {
+      "type": "number",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "amount": {
+      "type": "number",
+      "mysql": {
+        "dataType": "FLOAT",
+        "precision": 20,
+        "scale": 4
+      }
+    },
+    "branch_name": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "sales": {
+      "type": "belongsTo",
+      "model": "AfterSales",
+      "foreignKey": "afterSalesId",
+      "options": {
+        "validate": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
